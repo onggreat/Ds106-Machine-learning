@@ -37,10 +37,32 @@ Time series data is a collection of observations obtained through repeated meas
 
 ## modeling method
 * Smoothing Effect of Moving Average
+* ![image](https://user-images.githubusercontent.com/74976732/126280313-5a1c7ccf-2047-48b3-9145-c6919a7939aa.png)
+
 * Weighted Exponential Smoothing
+* ![image](https://user-images.githubusercontent.com/74976732/126275947-6f28250d-f8f0-4f8b-afb9-49a663a9e404.png)
+
 * Exponential and Double Exponential Smoothing
+* ![image](https://user-images.githubusercontent.com/74976732/126275985-5db01d0c-fe60-4c21-80a1-932e6d85987a.png)
+
 * Seasonality - Repeating Trends
+* ![image](https://user-images.githubusercontent.com/74976732/126276023-c05d2020-0208-42ae-8da0-899637e7eb28.png)
+
 * Stationary vs Non-Stationary Data
+![image](https://user-images.githubusercontent.com/74976732/126276048-093a0437-5c15-4ba7-9c56-66ee56cafd75.png)
+Stationary Time Series                                  Non-Stationary Time Series
+Mean not constant
+Variance is a function of time
+Covariance is a function of time
+![image](https://user-images.githubusercontent.com/74976732/126276108-569a20e5-2724-4991-b47c-3e96948b6a89.png)
+
+Mean needs to be constant
+Variance should not be a function of time
+Covariance should not be a function of time
+
+Dickey–Fuller test can be used to determine time-series stationarities 
+If data is not stationary, it need to be transformed to be stationary in order to evaluate it and what type of ARIMA terms you will use.
+
 
 ## Datetime Series Analysis Forecasting Models!
 Time Series Analysis with Statsmodels
@@ -59,6 +81,10 @@ Winters(1965) generalized the method to include seasonality, hence the name "Hol
 * The Holt-Winters Method has 3 updating equations, each with a constant that ranges from 0 to 1. The equations are intended to give more weight to recent observations and less weights to observations further in the past.
 * These weights are geometrically decreasing by a constant ratio.
 * The HW procedure can be made fully automatic by user-friendly software.
+* ![image](https://user-images.githubusercontent.com/74976732/126275850-30f44df3-27f8-42d4-91bf-15f83337070d.png)
+* 𝛼=𝑙𝑒𝑣𝑒𝑙 𝑠𝑚𝑜𝑜𝑡ℎ𝑖𝑛𝑔 𝑓𝑎𝑐𝑡𝑜𝑟
+* 𝛽 = trend smoothing factor
+* 𝛾=𝑠𝑒𝑎𝑠𝑜𝑛𝑎𝑙 𝑠𝑚𝑜𝑜𝑡ℎ𝑖𝑛𝑔 𝑓𝑎𝑐𝑡𝑜𝑟
 
 ## Explaination of White Noise
 * White noise is an important concept in time series forecasting.
@@ -78,7 +104,8 @@ Winters(1965) generalized the method to include seasonality, hence the name "Hol
 
 * MA - Moving Average (Parameter q = order of the moving average)
 * Indicates the regression error is actually a linear combination of error terms whose values occurred contemporaneously and at various times in the past. ![image](https://user-images.githubusercontent.com/74976732/126274173-675ae0a8-3e94-4f90-8107-2a1766bd0e3f.png)
-
+After modeling using sarimax
+![image](https://user-images.githubusercontent.com/74976732/126280801-983314cd-daf1-44df-bc82-ff662b06021a.png)
 
 ## SARIMAX Models
 We engineered the following additional features as exogenous regressor variables
